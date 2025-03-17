@@ -13,11 +13,11 @@ st.title("Canon Media Table")
 df = load_media()
 df = df.drop(df.columns[[0]], axis=1)
 
-media_type = st.selectbox('Select a type of media.', df['Media'].sort_values().unique(), index=None)
+media_types = st.multiselect('Select a type of media.', df['Media'].sort_values().unique())
 title_search = st.text_input('Search for a title.')
 
-if media_type:
-    df = filter_media_type(df, media_type)
+if media_types:
+    df = filter_media_type(df, media_types)
 if title_search:
     df =  filter_title(df, title_search)
    

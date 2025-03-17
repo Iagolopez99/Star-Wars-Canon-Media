@@ -5,10 +5,10 @@ def load_media():
     
     return df
 
-def filter_media_type(df, media_type):
-    if media_type:
-        df = df[df['Media'] == media_type]
-    
+def filter_media_type(df, media_types):
+    if media_types:
+        df = df[df["Media"].isin(media_types)]  
+        
     return df
 
 def filter_title(df, title):
