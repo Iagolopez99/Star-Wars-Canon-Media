@@ -14,7 +14,7 @@ def scrape_data():
     ctimeline['Year'] = ctimeline['Year'].str.replace(r'\[.*?\]', '', regex=True)
     ctimeline['Year'] = ctimeline['Year'].str.replace(r'c\. ', '', regex=True)
     ctimeline['Title'] = ctimeline['Title'].str.replace(r'†', '', regex=True)
-    ctimeline['Consumed'] = ''
+    #ctimeline['Consumed'] = False
 
     ctimeline.to_csv('data/all_media.csv')
 
