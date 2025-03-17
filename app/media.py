@@ -1,8 +1,12 @@
-import subprocess
 import pandas as pd
 
-# Run scraper to get the latest media data
-subprocess.run(["python", "app/scraper.py"])
+def load_media():
+    return pd.read_csv("data/all_media.csv")
 
-# Load the updated media table
-media_df = pd.read_csv("data/all_media.csv")
+def filter_media(df, media_type=None, year=None, consumed=None):
+    # filters media table based on user selection
+    if media_type:
+        df = df[df["Media"] == media_type]
+    if year:
+        df = df[df["Year"] == year]
+    return df
