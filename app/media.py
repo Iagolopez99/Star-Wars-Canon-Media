@@ -22,3 +22,7 @@ def filter_title(df, title):
 def filter_release_date(df, start, end):
     df = df[df['Released'].between(start, end)]
     return df
+
+#def reset_filters():
+
+#def save_changes():
