@@ -2,15 +2,15 @@ Unnamed: 0,Year,Media,Title,Released,Consumed
 0,"25,000 BBY",F,Untitled Star Wars film (James Mangold),Uknown,True
 1,382 BBY,N,The High Republic: Convergence ,2022-11-22,True
 2,382 BBY,JR,The High Republic: Quest for the Hidden City ,2022-11-01,True
-3,382 BBY,N,The High Republic: Path of Deceit,2022-10-04,True
+3,382 BBY,N,The High Republic: Path of Deceit,2022-10-04,False
 4,382 BBY,C,The High Republic Adventures: Quest of the Jedi,2023-04-26,False
 5,382 BBY,C,The High Republic — The Blade 1 ,2022-12-28,False
 6,382 BBY,C,The High Republic — The Blade 2 ,2023-01-25,False
 7,382 BBY,C,The High Republic — The Blade 3 ,2023-03-01,False
 8,382 BBY,C,The High Republic — The Blade 4 ,2023-03-29,False
-9,382 BBY,C,The High Republic Adventures (2022) 1 ,2022-11-30,True
-10,382 BBY,C,The High Republic Adventures (2022) 2 ,2023-01-11,True
-11,382 BBY,C,The High Republic Adventures (2022) 3 ,2023-03-15,True
+9,382 BBY,C,The High Republic Adventures (2022) 1 ,2022-11-30,False
+10,382 BBY,C,The High Republic Adventures (2022) 2 ,2023-01-11,False
+11,382 BBY,C,The High Republic Adventures (2022) 3 ,2023-03-15,False
 12,382 BBY,C,The High Republic Adventures (2022) 4 ,2023-05-03,False
 13,382 BBY,A,The High Republic: The Battle of Jedha ,2023-01-03,False
 14,382 BBY,C,"""Peace and Unity"" — The High Republic (2022) 1 ",2022-10-12,False
@@ -280,7 +280,7 @@ Unnamed: 0,Year,Media,Title,Released,Consumed
 278,,C,The High Republic – Fear of the Jedi 4 ,2025-05-21,False
 279,,C,The High Republic – Fear of the Jedi 5 ,2025-XX-XX,False
 280,,N,The High Republic: Into the Light,2025-04-01,False
-281,,JR,The High Republic: A Valiant Vow,2025-05-06,True
+281,,JR,The High Republic: A Valiant Vow,2025-05-06,False
 282,229 BBY,N,The High Republic: Trials of the Jedi,2025-06-17,False
 283,200 BBY,N,The Vow of Silver Dawn,2020-12-17,False
 284,152 BBY,N,The Acolyte: Wayseeker ,2025-05-06,False
@@ -339,7 +339,7 @@ Unnamed: 0,Year,Media,Title,Released,Consumed
 337,32 BBY,N,Queen's Peril,2020-06-02,False
 338,32 BBY,C,The Phantom Menace 25th Anniversary Special 1,2024-05-01,False
 339,32 BBY,F,Star Wars: Episode I The Phantom Menace,1999-05-19,False
-340,32 BBY,JR,La menace fantôme - Le roman du film,2016-01-20,True
+340,32 BBY,JR,La menace fantôme - Le roman du film,2016-01-20,False
 341,32 BBY,JR,La menace fantôme junior novelization,2017-05-17,False
 342,32 BBY,C,Star Wars: The Phantom Menace Graphic Novel Adaptation,2021-07-13,False
 343,32–19 BBY,C,Star Wars: The Prequel Trilogy – A Graphic Novel,2017-04-04,False
@@ -798,11 +798,11 @@ Unnamed: 0,Year,Media,Title,Released,Consumed
 796,5 BBY,TV,"Andor — ""Rix Road"" ",2022-11-23,False
 797,5 BBY,JR,Ezra's Gamble,2014-08-05,False
 798,5 BBY,VG,Star Wars Rebels: Ghost Raid,2014-07-16,False
-799,5 BBY,TV,"Star Wars Rebels — ""The Machine in the Ghost""",2014-08-11,True
+799,5 BBY,TV,"Star Wars Rebels — ""The Machine in the Ghost""",2014-08-11,False
 800,5 BBY,JR,Star Wars Rebels: Rise of the Rebels,2014-08-05,False
-801,5 BBY,TV,"Star Wars Rebels — ""Art Attack""",2014-08-18,True
-802,5 BBY,TV,"Star Wars Rebels — ""Entanglement""",2014-08-25,True
-803,5 BBY,TV,"Star Wars Rebels — ""Property of Ezra Bridger""",2014-09-01,True
+801,5 BBY,TV,"Star Wars Rebels — ""Art Attack""",2014-08-18,False
+802,5 BBY,TV,"Star Wars Rebels — ""Entanglement""",2014-08-25,False
+803,5 BBY,TV,"Star Wars Rebels — ""Property of Ezra Bridger""",2014-09-01,False
 804,5 BBY,TV,Star Wars Rebels: Spark of Rebellion,2014-09-26,False
 805,5 BBY,JR,Star Wars Rebels: The Rebellion Begins,2014-10-21,False
 806,5 BBY,C,Spark of Rebellion: A Star Wars Rebels Cinestory Comic,2017-08-08,False

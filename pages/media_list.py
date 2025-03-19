@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from st_aggrid import AgGrid
-from app import load_media, filter_media_type, filter_title, filter_release_date, reset_filters
+from app import load_media, filter_media_type, filter_title, filter_release_date, reset_filters, filter_unreleased
 
 st.set_page_config(
     page_title="Media Table",
@@ -19,6 +19,8 @@ if 'media_types' not in st.session_state:
     st.session_state.media_types = []
 if 'title_search' not in st.session_state:
     st.session_state.title_search = ""
+if 'unreleased' not in st.session_state:
+    st.session_state.unreleased = False
 
 with st.expander('Click for filtering options.'):
     media_types = st.multiselect(
@@ -29,8 +31,11 @@ with st.expander('Click for filtering options.'):
     )
     title_search = st.text_input('Search for a title:', value=st.session_state.title_search)
 
+    unreleased = st.toggle('Hide unreleasead media.', value=st.session_state.unreleased, disabled=False)
+
     st.session_state.media_types = media_types
     st.session_state.title_search = title_search
+    st.session_state.unreleased = unreleased
 
     if title_search:
         st.info(f"Last search: '{title_search}'")
@@ -52,6 +57,8 @@ if media_types:
     df = filter_media_type(df, media_types)
 if title_search:
     df =  filter_title(df, title_search)
+if unreleased:
+    df = filter_unreleased(df)
 #if release_date_range:
 #    df = filter_release_date(df, start_release_date, end_release_date)
 

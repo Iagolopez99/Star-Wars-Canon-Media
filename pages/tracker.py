@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder, ColumnsAutoSizeMode
-from app import load_media, filter_media_type, filter_title, filter_release_date, reset_filters, hide_consumed
+from app import load_media, filter_media_type, filter_title, filter_release_date, reset_filters, hide_consumed, filter_unreleased
 
 st.set_page_config(
     page_title="Media Tracker",
@@ -28,6 +28,8 @@ if 'title_search' not in st.session_state:
     st.session_state.title_search = ""
 if 'hide' not in st.session_state:
     st.session_state.hide = 'Show Both'
+if 'unreleased' not in st.session_state:
+    st.session_state.unreleased = False
 
 with st.expander('Click for filtering options.'):
     media_types = st.multiselect(
@@ -38,11 +40,14 @@ with st.expander('Click for filtering options.'):
     )
     title_search = st.text_input('Search for a title:', value=st.session_state.title_search)
 
+    unreleased = st.toggle('Hide unreleasead media.', value=st.session_state.unreleased, disabled=False)
+    
     hide = st.select_slider('Hide/Show Consumed/Unsonsumed media.', ['Hide Consumed', 'Show Both', 'Hide Unconsumed'], value=st.session_state.hide)
    
     st.session_state.media_types = media_types
     st.session_state.title_search = title_search
     st.session_state.hide = hide
+    st.session_state.unreleased = unreleased
 
     if title_search:
         st.info(f"Last search: '{title_search}'")
@@ -65,6 +70,8 @@ if title_search:
     df =  filter_title(df, title_search)
 if hide:
     df = hide_consumed(df, hide)
+if unreleased:
+    df = filter_unreleased(df)
 
 #if release_date_range:
 #    df = filter_release_date(df, start_release_date, end_release_date)
