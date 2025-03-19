@@ -26,5 +26,16 @@ def filter_release_date(df, start, end):
 def reset_filters():
     st.session_state.media_types = []
     st.session_state.title_search = ""
+    st.session_state.hide = 'Show Both'
+
+def hide_consumed(df, hide):
+    if hide == 'Hide Consumed':
+        df = df.loc[df['Consumed'] == False]
+    if hide == 'Hide Unconsumed':
+        df = df.loc[df['Consumed'] == True]
+    if hide == 'Show Both':
+        pass
+
+    return df
 
 #def save_changes():
