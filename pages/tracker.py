@@ -11,8 +11,11 @@ st.set_page_config(
 st.title("Canon Media Tracker")
 
 full_df = load_progress()
-if 'Consumed' not in full_df:
-    full_df['Consumed'] = False
+
+#full_df = load_progress()
+#progress_df = pd.read_csv('data/progress_prueba.csv')
+#if 'Consumed' not in full_df:
+#    full_df['Consumed'] = False
 
 df = full_df.copy()
 df = df.drop(df.columns[[0]], axis=1)
@@ -97,7 +100,15 @@ if st.button('Save Changes', icon='🗳️', use_container_width=True):
         full_df.loc[full_df['Title'] == row['Title'], 'Consumed'] = row['Consumed']
 
     full_df.to_csv('data/progress.csv', index=False)
-    # hay q meterlo con un wait para que se vea tantito
+    
+    # Otra idea para guardar progress
+    #for _, row in updated_data.iterrows():
+    #    if row['Consumed'] == True:
+    #        progress_df = pd.concat([progress_df, pd.DataFrame([row])], ignore_index=True)
+    #
+    #progress_df.to_csv('data/progress_prueba.csv')
+    
+    
     st.success("Changes saved successfully!")
     st.rerun()
 

@@ -10,9 +10,17 @@ def load_media():
     return df
 
 def load_progress():
-    df = pd.read_csv('data/progress.csv')
+    #os.system('python scraper.py')
+#
+    #full_df = pd.read_csv('data/all_media.csv')
+    #full_df['Consumed'] = False
+
+    progress_df = pd.read_csv('data/progress.csv')
+
+    #new_rows = full_df[~full_df['Title'].isin(progress_df['Title'])]
+    #progress_df = pd.concat([progress_df, new_rows], ignore_index=True)
     
-    return df
+    return progress_df
 
 
 def filter_media_type(df, media_types):
