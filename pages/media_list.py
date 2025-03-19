@@ -10,7 +10,7 @@ st.set_page_config(
 
 st.title("Canon Media Table")
 
-df = load_media("data/all_media.csv")
+df = load_media()
 df = df.drop(df.columns[[0]], axis=1)
 
 # Initialize session state for filters

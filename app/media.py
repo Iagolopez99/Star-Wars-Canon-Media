@@ -1,10 +1,19 @@
 import pandas as pd
 import streamlit as st
+import os
 
-def load_media(domain):
-    df = pd.read_csv(domain)
+
+def load_media():
+    os.system('python scraper.py')
+    df = pd.read_csv('data/all_media.csv')
     
     return df
+
+def load_progress():
+    df = pd.read_csv('data/progress.csv')
+    
+    return df
+
 
 def filter_media_type(df, media_types):
     if media_types:

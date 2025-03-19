@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder, ColumnsAutoSizeMode
-from app import load_media, filter_media_type, filter_title, filter_release_date, reset_filters, hide_consumed, filter_unreleased
+from app import load_progress, filter_media_type, filter_title, filter_release_date, reset_filters, hide_consumed, filter_unreleased
 
 st.set_page_config(
     page_title="Media Tracker",
@@ -10,16 +10,13 @@ st.set_page_config(
 
 st.title("Canon Media Tracker")
 
-full_df = load_media("data/progress.csv")
+full_df = load_progress()
 if 'Consumed' not in full_df:
     full_df['Consumed'] = False
 
 df = full_df.copy()
 df = df.drop(df.columns[[0]], axis=1)
 
-#progress_df = load_media("data/all_media.csv")
-#if 'Consumed' not in progress_df:
-#    progress_df['Consumed'] = False
 
 # Initialize session state for filters
 if 'media_types' not in st.session_state:
